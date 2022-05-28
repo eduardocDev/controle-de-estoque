@@ -9,12 +9,12 @@
 </head>
 <body>
     <h1>CONTROLE DE ESTOQUE MINIMALISTA</h1>
-    <section>   
+    <section>
         <div>
-            <a href="in.php" class="add">ADICIONAR OU REMOVER ITENS</a>
-        </div><br>
+            <a href="out.php" class="verify"><b>VERIFICAR ITENS DISPONIVEIS</b></a>
+        </div><br>   
         <div>
-            <a href="out.php" class="verify">VERIFICAR ITENS DISPONIVEIS</a>
+            <a href="in.php" class="add"><b>ADICIONAR OU REMOVER ITENS</b></a>
         </div>
         <?php ?>
     </section>
