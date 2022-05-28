@@ -17,5 +17,6 @@
         </form>
             <br><a href="http://">verificar estoque</a>
     </section>
+    <?php?>
 </body>
 </html>

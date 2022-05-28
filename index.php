@@ -16,6 +16,7 @@
         <div>
             <a href="out.php" class="verify">VERIFICAR ITENS DISPONIVEIS</a>
         </div>
+        <?php ?>
     </section>
 </body>
 </html>
