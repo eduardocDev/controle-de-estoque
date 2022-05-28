@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'digital-7';
+    src: url('digital-7.ttf');
+}   
+body{
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+section{
+    text-align: center;
+    margin: 0 auto;
+    padding: 10%;
+}
+.add{
+    color: blue;
+}
+.verify{
+    color: brown;
+}
+a{
+    text-decoration: none;    
+    font-family: 'digital-7';
+    font-size: xx-large;
+}
+a:hover{
+    font-size: 100px;
+}
