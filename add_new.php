@@ -32,36 +32,26 @@ if(isset($_POST['submit'])) {
     <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: cyan;">
         Controle de estoque
     </nav>
-    
+
     <div class="container">
-        <a href="add_new.php" class="btn btn-dark mb-3">Adicionar Novo</a>
-
-        <table class="table table-hover text-center">
-         <thead class="table-dark">
-           <tr>
-             <th scope="col">Id</th>
-             <th scope="col">Item</th>
-             <th></th>
-           </tr>
-         </thead>
-         <tbody>
-            <?php
-            include "db_conn.php";
-                $sql = "SELECT * FROM `estoque`";
-                $result = mysqli_query($conn, $sql);
-                while($row = mysqli_fetch_assoc($result)){
-                    ?>
-                        <tr>
-                            <td><?php echo $row['id'] ?></td>
-                            <td><?php echo $row['item_name'] ?></td>
-                            <td><a href="" class="link-dark">Delete</a></td>
-                        </tr>
-                    <?php
-                }
-            ?>
-
-         </tbody>
-</table>
+        <div class="text-center mb4">
+            <h3>Adicionar Novo Item</h3>
+        </div>
+        <div class="container d-flex justify-content-center">
+            <form action="" method="post" style="width:50vw; min-width:300px;">
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label">Adicione um item ao estoque:</label>
+                        <input type="text" class="form-control" name="item" placeholder="Nome do Item">
+                    </div>
+                </div>
+               <br> 
+                <div>
+                    <button type="submit" class="btn btn-success" name="submit">Salvar</button>
+                    <a href="index.php" class="btn btn-danger">Cancel</a>
+                </div>
+            </form>
+        </div>
     </div>
 
     <!-- Bootstrap -->
