@@ -1,23 +1,3 @@
-<?php
-include "db_conn.php";
-
-if(isset($_POST['submit'])) {
-    $item = $_POST['item'];
-
-    $sql = "INSERT INTO `estoque`(`id`, `item_name`) VALUES (NULL,'$item')";
-
-    $result = mysqli_query($conn, $sql);
-
-    if($result) {
-        header("Location: index.php?msg=Novo item adicionado com sucesso");
-    }
-    else{
-        echo "Failed: ". mysqli_error($conn);
-    }
-}
-
-?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -39,8 +19,8 @@ if(isset($_POST['submit'])) {
         <table class="table table-hover text-center">
          <thead class="table-dark">
            <tr>
-             <th scope="col">Id</th>
              <th scope="col">Item</th>
+             <th></th>
              <th></th>
            </tr>
          </thead>
@@ -52,8 +32,8 @@ if(isset($_POST['submit'])) {
                 while($row = mysqli_fetch_assoc($result)){
                     ?>
                         <tr>
-                            <td><?php echo $row['id'] ?></td>
                             <td><?php echo $row['item_name'] ?></td>
+                            <td><a href="" class="link-dark">Update</a></td>
                             <td><a href="" class="link-dark">Delete</a></td>
                         </tr>
                     <?php
