@@ -14,6 +14,16 @@
     </nav>
     
     <div class="container">
+        <?php
+        if(isset($_GET['msg'])){
+          $msg = $_GET['msg'];
+          echo '<div class="alert alert-success" role="alert">
+          '.$msg.'
+        </div>';
+        }
+
+        ?>
+
         <a href="add_new.php" class="btn btn-dark mb-3">Adicionar Novo</a>
 
         <table class="table table-hover text-center">
@@ -33,8 +43,8 @@
                     ?>
                         <tr>
                             <td><?php echo $row['item_name'] ?></td>
-                            <td><a href="" class="link-dark">Update</a></td>
-                            <td><a href="" class="link-dark">Delete</a></td>
+                            <td><a href="edit.php?id=<?php echo $row['id']?>" class="link-dark">Update</a></td>
+                            <td><a href="delete.php?id=<?php echo $row['id']?>" class="link-dark">Delete</a></td>
                         </tr>
                     <?php
                 }
