@@ -8,13 +8,14 @@
     <title>Controle de estoque</title>
 </head>
   <body>
-    
+    <!--navbar-->
     <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: cyan;">
         Controle de estoque
     </nav>
-    
+    <!-- container com tabela para apresentação dos elementos-->
     <div class="container">
         <?php
+          //div que recebera alerta informando ações realizadas com os itens do estoque
         if(isset($_GET['msg'])){
           $msg = $_GET['msg'];
           echo '<div class="alert alert-success" role="alert">
@@ -34,11 +35,16 @@
              <th></th>
            </tr>
          </thead>
+         <!--Corpo da tabela-->
          <tbody>
             <?php
+            //Inclusão da conexão com o bando de dados para realizar operações usando comando SQL
             include "db_conn.php";
                 $sql = "SELECT * FROM `estoque`";
                 $result = mysqli_query($conn, $sql);
+                  //comando while para permitir que o resultado decorrente da demonstração dos itens inseridos 
+                  //seja passivel de serem deletado sou modificados atraves dos comandos DML(data modification language) 
+                  //UPDATE ou DELETE
                 while($row = mysqli_fetch_assoc($result)){
                     ?>
                         <tr>

@@ -1,4 +1,5 @@
 <?php
+//Desenvolvimento da conexão com o banco de dados controle-estoque
 $servername = "localhost";
 $database = "controle-estoque";
 $username = "root";

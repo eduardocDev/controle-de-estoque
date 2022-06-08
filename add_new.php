@@ -1,4 +1,7 @@
 <?php
+//Inclusão da conexão com o banco de dados para que seja usado o comando INSERT 
+//com intuito de inserir os dados enviados atraves do metodo post para a tabela estoque
+//do banco de dados conetrole-estoque cujo está situado nos comandos de conexão.
 include "db_conn.php";
 
 if(isset($_POST['submit'])) {
@@ -17,7 +20,7 @@ if(isset($_POST['submit'])) {
 }
 
 ?>
-
+<!--Tela de inserção dos dados desenvolvida e estilizada usando bootstrap jsdelivr-->
 <!doctype html>
 <html lang="en">
   <head>
@@ -38,6 +41,9 @@ if(isset($_POST['submit'])) {
             <h3>Adicionar Novo Item</h3>
         </div>
         <div class="container d-flex justify-content-center">
+            <!--Formulario fazendo uso do metodo post para enviar dados para a tabela estoque no banco
+                de dados controle-estoque.
+        -->
             <form action="" method="post" style="width:50vw; min-width:300px;">
                 <div class="row">
                     <div class="col">

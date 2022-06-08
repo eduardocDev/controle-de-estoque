@@ -1,24 +1,28 @@
 <?php
+//Inclusão da conexão com o banco de dados para permitir o uso do comando UPDATE para alterar
+//dados da tabela estoque do bando de dados
 include "db_conn.php";
 $id = $_GET['id'];
 
 if(isset($_POST['submit'])) {
     $item = $_POST['item'];
-
+        //comando SQL que permite a alteração de dados 
     $sql = "UPDATE `estoque` SET `item_name`='$item' WHERE id=$id";
 
     $result = mysqli_query($conn, $sql);
 
     if($result) {
+            //msg informado situação de sucesso
         header("Location: index.php?msg=Item Atualizado Com Sucesso");
     }
     else{
+            //msg informando falha no acesso ao banco de dados
         echo "Failed: ". mysqli_error($conn);
     }
 }
 
 ?>
-
+<!--Tela usada para que o usuario desenvolva as alterações no sistema-->
 <!doctype html>
 <html lang="en">
   <head>
@@ -38,9 +42,9 @@ if(isset($_POST['submit'])) {
         <div class="text-center mb4">
             <h3>Atualizar Item</h3>
         </div>
-
-        <?php
         
+        <?php
+        //Area responsavel por trazer o elemento do banco de dados para que seja realizada as alterações
         $sql = "SELECT * FROM `estoque` WHERE id = $id LIMIT 1";
         $result =  mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
