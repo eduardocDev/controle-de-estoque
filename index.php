@@ -49,8 +49,8 @@
                     ?>
                         <tr>
                             <td><?php echo $row['item_name'] ?></td>
-                            <td><a href="edit.php?id=<?php echo $row['id']?>" class="link-dark">Update</a></td>
-                            <td><a href="delete.php?id=<?php echo $row['id']?>" class="link-dark">Delete</a></td>
+                            <td><a href="edit.php?id=<?php echo $row['id']?>" class="link-dark">Editar</a></td>
+                            <td><a href="delete.php?id=<?php echo $row['id']?>" class="link-dark">Remover</a></td>
                         </tr>
                     <?php
                 }
