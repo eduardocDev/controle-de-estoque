@@ -1,7 +1,7 @@
 <?php
 //Inclusão da conexão com o banco de dados para que seja usado o comando INSERT 
 //com intuito de inserir os dados enviados atraves do metodo post para a tabela estoque
-//do banco de dados conetrole-estoque cujo está situado nos comandos de conexão.
+//do banco de dados controle-estoque cujo está situado nos comandos de conexão.
 include "db_conn.php";
 
 if(isset($_POST['submit'])) {
