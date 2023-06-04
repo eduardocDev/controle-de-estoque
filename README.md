@@ -4,6 +4,6 @@ Aqui está um controle de estoque com intuito de realizar uma atividade academic
 mais elaborada.
 
 o codigo e totalmente livre para qualquer tipo de alteração, uso comercial, etc, meu foco e desenvolver um conjunto de aplicação futuramente, que busque auxiliar
-micro empreendedores a gerenciar tuas empresas. 
+micro empreendedores a gerenciar suas empresas. 
 
 Eduardo Santiago Do Carmo.
